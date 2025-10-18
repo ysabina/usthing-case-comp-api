@@ -37,10 +37,10 @@ git clone https://github.com/ysabina/usthing-case-comp-api.git
 cd usthing-case-comp-ap
 
 Install dependencies
-npm install
+```npm install```
 
 Run in development mode (with auto-reload)
-npm run dev
+```npm run dev```
 
 
 
@@ -49,24 +49,24 @@ The server will start on `http://localhost:8080`
 ### Production Build
 
 Compile TypeScript
-npm run build
+```npm run build```
 
 Run the compiled version
-npm start
+```npm start```
 
 
 
 ### Docker
 
-Build the image
-docker build -t usthing-case-comp-api .
+*Build the image*
+```docker build -t usthing-case-comp-api .```
 
-Run the container
-docker run -p 8080:8080 usthing-case-comp-api
+*Run the container*
+```docker run -p 8080:8080 usthing-case-comp-api```
 
-Or use docker-compose:
+*Or use docker-compose:*
 
-docker-compose up
+```docker-compose up```
 
 
 
@@ -74,12 +74,12 @@ docker-compose up
 
 ### Quick Health Check
 
-First, make sure the server is running:
+*First, make sure the server is running:*
 
-curl http://localhost:8080/health
+```curl http://localhost:8080/health```
 
 
-Expected response:
+*Expected response:*
 {
 "status": "ok
 , "timestamp": "2025-10-18T07:40:00.00
@@ -91,11 +91,11 @@ API", "version":
 
 This endpoint triggers the scraping process (takes 5-15 seconds):
 
-curl http://localhost:8080/api/v1/competitions
+```curl http://localhost:8080/api/v1/competitions```
 
 You'll see output in the server logs showing which sources are being scraped and how many competitions were found.
 
-Sample response:
+*Sample response:*
 {
 "competitions":
 [
@@ -114,32 +114,32 @@ https://competition.acrc.hku.hk",
 
 ### Filter by Organizer
 
-Get only HKUST competitions
-curl "http://localhost:8080/api/v1/competitions/filter?organizer=HKUST"
+*Get only HKUST competitions*
+```curl "http://localhost:8080/api/v1/competitions/filter?organizer=HKUST"```
 
-Get only HKU competitions
-curl "http://localhost:8080/api/v1/competitions/filter?organizer=HKU"
+*Get only HKU competitions*
+```curl "http://localhost:8080/api/v1/competitions/filter?organizer=HKU"```
 
 
 
 ### Filter by Keyword
 
-Find competitions with "case" in the title
-curl "http://localhost:8080/api/v1/competitions/filter?keyword=case"
+*Find competitions with "case" in the title*
+```curl "http://localhost:8080/api/v1/competitions/filter?keyword=case"```
 
-Find hackathons
-curl "http://localhost:8080/api/v1/competitions/filter?keyword=hackathon"
+*Find hackathons*
+```curl "http://localhost:8080/api/v1/competitions/filter?keyword=hackathon"```
 
 
 ### Combined Filters
 
-curl "http://localhost:8080/api/v1/competitions/filter?organizer=HKUST&keyword=case"
+```curl "http://localhost:8080/api/v1/competitions/filter?organizer=HKUST&keyword=case"```
 
 
 
 ### Get Specific Competition
 
-curl http://localhost:8080/api/v1/competitions/comp-0-1760758524821
+```curl http://localhost:8080/api/v1/competitions/comp-0-1760758524821```
 
 
 
