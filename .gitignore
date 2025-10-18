@@ -1,0 +1,9 @@
+cat > .gitignore << 'EOF'
+node_modules/
+dist/
+*.log
+.env
+.DS_Store
+.vscode/
+*.tsbuildinfo
+EOF
