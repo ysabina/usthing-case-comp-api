@@ -78,7 +78,6 @@ First, make sure the server is running:
 
 curl http://localhost:8080/health
 
-text
 
 Expected response:
 {
