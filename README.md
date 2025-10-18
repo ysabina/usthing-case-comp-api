@@ -86,15 +86,13 @@ Expected response:
 , "timestamp": "2025-10-18T07:40:00.00
 Z", "service": "USThing Case Competition
 API", "version":
-text
+}
 
 ### Get All Competitions
 
 This endpoint triggers the scraping process (takes 5-15 seconds):
 
 curl http://localhost:8080/api/v1/competitions
-
-text
 
 You'll see output in the server logs showing which sources are being scraped and how many competitions were found.
 
@@ -110,7 +108,7 @@ eadline": "15 December 2024", "description": "HSBC/
 KU Business Case Competition 2025", "eligibi
 https://competition.acrc.hku.hk",
 https://competition.acrc.hku.hk",
-
+}
 
 
 
